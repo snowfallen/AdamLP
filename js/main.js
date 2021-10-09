@@ -3,10 +3,22 @@ const   burger = document.querySelector('.container-header__burger'),
     arrows     = document.querySelectorAll('.arrow-line'),
     arrowLeft  = document.querySelector('#arrow-left'),
     arrowRigth = document.querySelector('#arrow-rigth'),
-    burgerLine = document.querySelectorAll('.burger-line');
+    burgerLine = document.querySelectorAll('.burger-line'),
+    about  = document.querySelector('.aboutjs'),
+    services  = document.querySelector('.servicesjs'),
+    works  = document.querySelector('.worksjs'),
+    blog  = document.querySelector('.blogjs');
 
 let index = 1,
    indexA = 1;
+console.log(about);
+about.addEventListener('click',menuActive)
+
+services.addEventListener('click',menuActive)
+
+works.addEventListener('click',menuActive)
+
+blog.addEventListener('click',menuActive)
 
 burger.addEventListener('click',menuActive)
 
