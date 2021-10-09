@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 0;
   left: 0;
+  overflow-x: hidden;
 }
 #wrapper #content {
   width: 78%;
@@ -135,7 +136,7 @@ header .container-header__menu li::after {
   content: "";
   height: 2px;
   width: 0%;
-  background-color: #FCAE61;
+  background-color: #8643DC;
   display: block;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
@@ -145,7 +146,7 @@ header .container-header__menu li:hover::after {
   content: "";
   height: 2px;
   width: 100%;
-  background-color: #FCAE61;
+  background-color: #8643DC;
   display: block;
 }
 header .container-header__burger {
@@ -214,7 +215,7 @@ header .container-header__burger-menu.active {
   transition: all 0.5s;
   top: 136px;
   left: 0;
-  height: calc(100vh - 136px);
+  height: calc(90vh - 136px);
 }
 header .container-header__burger-menu li a {
   font-size: calc(12px + 0.5555555556vw);
@@ -228,7 +229,7 @@ header .container-header__burger-menu li::after {
   content: "";
   height: 2px;
   width: 0%;
-  background-color: #FCAE61;
+  background-color: #8643DC;
   display: block;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
@@ -238,7 +239,7 @@ header .container-header__burger-menu li:hover::after {
   content: "";
   height: 2px;
   width: 100%;
-  background-color: #FCAE61;
+  background-color: #8643DC;
   display: block;
 }
 header .container-header__burger-menu .arrow {
@@ -298,13 +299,6 @@ main .container-about {
   padding: 0 1%;
 }
 main .container-about__txt {
-  -webkit-transform: translate(-300%, 0px);
-      -ms-transform: translate(-300%, 0px);
-          transform: translate(-300%, 0px);
-  opacity: 0.5;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
   padding-top: 130px;
 }
 main .container-about__txt h4 {
@@ -344,6 +338,24 @@ main .container-about__txt a {
   font-weight: 500;
   line-height: 120%;
   color: #fff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+main .container-about__txt a:hover {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #dc43d4;
+}
+main .container-about .container-about__txt {
+  -webkit-transform: translate(-100%, 0px);
+      -ms-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 main .container-about .container-about__txt.active {
   -webkit-transform: translate(0px, 0px);
@@ -529,6 +541,528 @@ main .container-services__services .services-box__txt p {
   line-height: 26px;
   color: #25202F;
 }
+main .container-portfolio {
+  padding: 100px 1%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+main .container-portfolio #bgi {
+  width: 100vw;
+  height: 900px;
+  position: absolute;
+  left: -14%;
+  z-index: -1;
+  background-image: url("../img/bg-portf.png");
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+main .container-portfolio__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .container-portfolio__header #container-portfolio-title p {
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #8643DC;
+}
+main .container-portfolio__header #container-portfolio-title #line {
+  margin: 10px 0 15px 0;
+  background-color: #8643DC;
+  height: 2px;
+  width: 50px;
+}
+main .container-portfolio__header #container-portfolio-title h3 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 1.6666666667vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #25202F;
+}
+main .container-portfolio__header #container-portfolio-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+main .container-portfolio__header #container-portfolio-more h4 {
+  padding-right: 15px;
+  font-size: calc(12px + 0.8333333333vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #25202F;
+}
+main .container-portfolio__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .container-portfolio__img img {
+  width: 50%;
+  height: 50%;
+}
+main .container-clients {
+  width: 100%;
+  padding: 100px 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .container-clients__title p {
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #8643DC;
+}
+main .container-clients__title #line {
+  margin: 10px 0 15px 0;
+  background-color: #8643DC;
+  height: 2px;
+  width: 50px;
+}
+main .container-clients__title h3 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 1.6666666667vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #25202F;
+}
+main .container-clients__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+main .container-clients__box div {
+  width: 170px;
+  height: 170px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+main .container-clients__box div img {
+  width: 100%;
+  height: 100%;
+}
+main .container-clients__box div.active {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+main .container-peoplesay {
+  width: 100%;
+  padding: 100px 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .container-peoplesay__title p {
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #8643DC;
+}
+main .container-peoplesay__title #line {
+  margin: 10px 0 15px 0;
+  background-color: #8643DC;
+  height: 2px;
+  width: 50px;
+}
+main .container-peoplesay__title h3 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 1.6666666667vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #25202F;
+}
+main .container-peoplesay .container-slider__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .container-peoplesay .container-slider__line img {
+  width: 125px;
+  height: 188px;
+  border-radius: 20px;
+}
+main .container-peoplesay .container-slider__line #container-vector {
+  width: 150px;
+  height: 32px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+main .container-peoplesay .container-slider__line #container-vector img {
+  width: 18.5px;
+  height: 32px;
+}
+main .container-peoplesay .container-slider__dots {
+  padding: 20px 0 0 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 180px;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .container-peoplesay .slide {
+  display: none;
+}
+main .container-peoplesay .slide p {
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #25202F;
+  padding: 25px 0 50px 0;
+}
+main .container-peoplesay .slide.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .container-peoplesay .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: beige;
+  border: 1px solid black;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+main .container-peoplesay .dot.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #8643DC;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+main .container-blog {
+  width: 100%;
+  padding: 100px 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .container-blog__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 30px;
+}
+main .container-blog__title #title {
+  padding-right: 25px;
+}
+main .container-blog__title #title p {
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #8643DC;
+}
+main .container-blog__title #title #line {
+  margin: 10px 0 15px 0;
+  background-color: #8643DC;
+  height: 2px;
+  width: 50px;
+}
+main .container-blog__title #title h3 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 1.6666666667vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+  color: #25202F;
+}
+main .container-blog__title #innerbox-img {
+  height: 233px;
+  width: 90%;
+}
+main .container-blog__title #innerbox-img img {
+  width: 100%;
+  height: 100%;
+}
+main .container-blog__title #innerbox-img .blog-txt p {
+  padding: 20px 0 10px 0;
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  line-height: 26px;
+  color: #8643DC;
+  cursor: pointer;
+}
+main .container-blog__title #innerbox-img .blog-txt h4 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #25202F;
+}
+main .container-blog__img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+main .container-blog__img .box-img {
+  height: 350px;
+  padding: 0 5px;
+  text-align: center;
+}
+main .container-blog__img .box-img img {
+  width: 255px;
+  height: 350px;
+}
+main .container-blog__img .box-img .blog-txt p {
+  padding: 20px 0 10px 0;
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  line-height: 26px;
+  color: #8643DC;
+  cursor: pointer;
+}
+main .container-blog__img .box-img .blog-txt h4 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #25202F;
+}
+main .container-contact {
+  width: 100%;
+  padding: 100px 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+main .container-contact__title p {
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #8643DC;
+}
+main .container-contact__title #line {
+  margin: 10px 0 15px 0;
+  background-color: #8643DC;
+  height: 2px;
+  width: 50px;
+}
+main .container-contact__title h3 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 1.6666666667vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+  color: #25202F;
+}
+main .container-contact__form {
+  width: 100%;
+}
+main .container-contact__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 50px;
+}
+main .container-contact__form form input {
+  font-size: calc(12px + 0.5555555556vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #25202F;
+  padding: 17px 0 17px 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #DAD2E3;
+}
+main .container-contact__form a {
+  padding: 14px 48px;
+  background-color: #8643DC;
+  border-radius: 100px;
+  font-size: calc(12px + 0.8333333333vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+main .container-contact__form a:hover {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #dc43d4;
+}
+main .container-contact #bgi {
+  width: 100vw;
+  height: 900px;
+  position: absolute;
+  left: -14%;
+  z-index: -1;
+  background-image: url("../img/bg-portf.png");
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+main .container-contact.active {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer {
+  width: 100%;
+}
+footer h2 {
+  padding-bottom: 50px;
+  font-size: calc(12px + 1.6666666667vw);
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+  color: #25202F;
+}
+footer #img-footer {
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer #img-footer img {
+  margin: 0 10px;
+  cursor: pointer;
+}
 
 @media (max-width: 1600px) {
   main .container-about {
@@ -541,6 +1075,35 @@ main .container-services__services .services-box__txt p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media (max-width: 1200px) {
+  main .container-blog {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  main .container-blog__title {
+    padding: 0 0 120px 0;
+  }
+
+  main .container-blog__title #innerbox-img {
+    height: 233px;
+    width: 40%;
+  }
+}
+@media (max-width: 1024px) {
+  main .container-about .container-about__txt {
+    -webkit-transform: translate(-50%, 0px);
+        -ms-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
+  }
+
+  main .container-clients__box div {
+    width: 200px;
+    height: 200px;
   }
 }
 @media (max-width: 1023px) {
@@ -584,6 +1147,29 @@ main .container-services__services .services-box__txt p {
   main .container-about__img #bg #dot3 {
     left: 90%;
     top: 293px;
+  }
+
+  main .container-portfolio #bgi {
+    width: 100vw;
+    height: 900px;
+    position: absolute;
+    left: -7%;
+    z-index: -1;
+    background-image: url("../img/bg-portf.png");
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: cover;
+  }
+
+  main .container-contact #bgi {
+    width: 100vw;
+    height: 900px;
+    position: absolute;
+    left: -7%;
+    background-image: url("../img/bg-portf.png");
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: cover;
   }
 }
 @media (max-width: 768px) {
@@ -631,6 +1217,84 @@ main .container-services__services .services-box__txt p {
 
   main .container-about__img img {
     float: right;
+  }
+
+  main .container-portfolio__img {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container-portfolio__img img {
+    width: 100%;
+  }
+
+  main .container-blog__title #innerbox-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  main .container-blog__title #innerbox-img .blog-txt {
+    padding-left: 10px;
+  }
+
+  main .container-blog__title {
+    padding: 0 0 20px 0;
+  }
+  main .container-peoplesay{
+    padding: 50px 1%;
+  }
+  main .container-blog{
+    padding: 50px 1%;
+  }
+  main .container-clients{
+    padding: 50px 1%;
+  }
+  main .container-portfolio{
+    padding: 50px 1%;
+  }
+}
+@media (max-width: 630px) {
+  main .container-blog__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  main .container-blog__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  main .container-blog__title #innerbox-img {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container-blog__title #innerbox-img img {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  main .container-blog__img .box-img {
+    margin-top: 110px;
+  }
+
+  main .container-blog__title {
+    padding: 0 0 0 0;
+  }
+
+  main .container-blog__title #innerbox-img .blog-txt h4 {
+    padding-bottom: 10px;
   }
 }
 @media (max-width: 548px) {
